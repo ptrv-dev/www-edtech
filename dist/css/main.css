@@ -19,3 +19,59 @@
   font-weight: 600;
   src: local(""), url("../fonts/poppins-v20-latin-600.woff2") format("woff2"), url("../fonts/poppins-v20-latin-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+body {
+  background-color: #ffffff;
+  font-size: 16px;
+  font-family: "Poppins";
+  color: #777777;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1350px;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 50px 0;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 60px;
+  padding: 0;
+}
+.nav__link {
+  font-size: 18px;
+  line-height: 27px;
+  color: #4A4A4A;
+  text-decoration: none;
+}
+
+.button {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+  padding: 13px 33px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button_o {
+  border: 1px solid #289BDE;
+  background-color: transparent;
+  color: #289BDE;
+}
