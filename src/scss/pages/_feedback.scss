@@ -11,6 +11,7 @@
 
 	&__button {
 		position: absolute;
+		z-index: 5;
 		top: 50%;
 		transform: translateY(-50%);
         border-radius: 50%;
@@ -46,6 +47,7 @@
 	&__content {
 		display: flex;
         width: 100%;
+		overflow: hidden;
 	}
 
 	// .slider-feedback__slide
@@ -64,6 +66,8 @@
     background-image: url('../img/feedback/quote.png');
     background-repeat: no-repeat;
     background-position: 40px 40px;
+	flex: 0 0 calc(50% - 12px);
+	transition: transform .8s ease-in-out;
 	&:last-child {
 		margin-right: 0;
 	}

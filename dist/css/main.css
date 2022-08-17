@@ -315,6 +315,7 @@ p {
 }
 .slider-feedback__button {
   position: absolute;
+  z-index: 5;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
@@ -347,6 +348,7 @@ p {
 .slider-feedback__content {
   display: flex;
   width: 100%;
+  overflow: hidden;
 }
 .feedback-slide {
   margin-right: 24px;
@@ -359,6 +361,8 @@ p {
   background-image: url("../img/feedback/quote.png");
   background-repeat: no-repeat;
   background-position: 40px 40px;
+  flex: 0 0 calc(50% - 12px);
+  transition: transform 0.8s ease-in-out;
 }
 .feedback-slide:last-child {
   margin-right: 0;
