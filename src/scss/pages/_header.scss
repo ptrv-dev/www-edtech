@@ -1,11 +1,25 @@
+@keyframes showBlock {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 .header {
-	position: fixed;
+	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
 	z-index: 99;
 	padding: 50px 0;
 	background-color: $white;
+	&_scroll {
+		position: fixed;
+		z-index: 99;
+		padding: 20px 0;
+		animation: showBlock .5s ease-in forwards;
+	}
 	// .header__inner
 
 	&__inner {

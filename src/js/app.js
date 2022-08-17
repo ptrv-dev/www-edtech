@@ -1,3 +1,18 @@
+// Burger
+
+const burgerButton = document.querySelector('.burger-header');
+const headerNav = document.querySelector('.nav');
+
+burgerButton.addEventListener('click', (el) => {
+    headerNav.classList.toggle('nav_active');
+    burgerButton.classList.toggle('burger-header_active');
+    document.body.classList.toggle('no-scroll');
+});
+
+
+
+// Spoller
+
 const items = document.querySelectorAll('.questions-item__title');
 items.forEach((element) => {
     element.addEventListener("click", () => {
@@ -12,7 +27,7 @@ items.forEach((element) => {
 });
 
 // Feedback Slider
-// slider-feedback__button_disable
+
 const prevButton = document.getElementsByClassName('slider-feedback__button_left')[0];
 const nextButton = document.getElementsByClassName('slider-feedback__button_right')[0];
 
@@ -63,3 +78,43 @@ nextButton.addEventListener('click', (e) => {
     currentSlide ++;
     moveSlider();
 });
+
+// Header adaptive 
+
+function changeTemplate(){
+    const burger = document.querySelector('.burger-header');
+    const button = document.querySelector('.header__button');
+    const navList = document.querySelector('.nav__list');
+    const header = document.querySelector('.header__inner');
+
+    if(window.innerWidth < 500) {
+        navList.append(button);
+    } else {
+        burger.before(button);
+    }
+}
+
+window.addEventListener('resize', () => {
+    changeTemplate();
+});
+window.addEventListener('load', () => {
+    changeTemplate();
+});
+
+// Header 
+
+const header = document.querySelector('.header');
+
+window.onscroll = () => {
+    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+        header.classList.add('header_scroll');
+    } else {
+        header.classList.remove('header_scroll');
+    }
+};
+
+function myFunction() {
+  if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+    document.getElementById("myImg").className = "slideUp";
+  }
+}
