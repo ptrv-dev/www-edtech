@@ -5,6 +5,7 @@
 	width: 100%;
 	z-index: 99;
 	padding: 50px 0;
+	background-color: $white;
 	// .header__inner
 
 	&__inner {
@@ -54,24 +55,5 @@
 		line-height: 27px;
 		color: $dark-gray;
 		text-decoration: none;
-	}
-}
-.button {
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 30px;
-	text-align: center;
-	color: $white;
-    padding: 13px 33px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    // .button_o
-
-	&_o {
-        border: 1px solid #289BDE;
-        background-color: transparent;
-        color: #289BDE;
 	}
 }

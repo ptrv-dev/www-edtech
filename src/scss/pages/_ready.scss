@@ -1,0 +1,17 @@
+.ready {
+	.container {
+		border-radius: 5px;
+		background-color: #289bde;
+        padding: 80px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+	}
+	// .ready__content
+    .section__title {
+        margin-bottom: 20px;
+    }
+	&__content {
+        flex-basis: 528px;
+	}
+}
