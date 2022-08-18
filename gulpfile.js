@@ -17,6 +17,7 @@ import { style } from './gulp/tasks/style.js';
 import { script } from './gulp/tasks/script.js';
 import { image } from './gulp/tasks/image.js'
 import { font } from './gulp/tasks/font.js'
+import { ghPages } from './gulp/tasks/ghpages.js'
 
 function watcher() {
     gulp.watch(path.watch.files, copy);
@@ -29,5 +30,7 @@ function watcher() {
 const mainTasks = gulp.parallel(copy, html, style, script, image);
 
 const dev = gulp.series(reset, font, mainTasks, gulp.parallel(watcher, server));
+
+gulp.task('deploy', ghPages);
 
 gulp.task('default', dev);
