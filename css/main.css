@@ -53,11 +53,21 @@ button {
   border: none;
   border-radius: 5px;
   background: #289bde;
+  transition: box-shadow 0.3s;
+}
+.button:hover {
+  box-shadow: inset 0px -5px 0px 0px #1f79ad;
 }
 .button_o {
   border: 1px solid #289bde;
   background-color: transparent;
   color: #289bde;
+  transition: background 0.3s, color 0.3s;
+}
+.button_o:hover {
+  background: #289bde;
+  color: #ffffff;
+  box-shadow: none;
 }
 .button_white {
   color: #289bde;
@@ -156,7 +166,7 @@ p {
 
 .main {
   padding-top: 160px;
-  height: 70vh;
+  height: 80vh;
 }
 .main__container {
   height: 100%;
@@ -186,6 +196,7 @@ p {
   justify-content: center;
   background: none;
   border: none;
+  display: none;
 }
 .slider-main__button:first-child {
   left: 60px;
@@ -198,6 +209,7 @@ p {
   height: 100%;
 }
 .slider-main__slide {
+  padding: 20px;
   background-position: center center;
   background-size: cover;
   height: 100%;
@@ -574,16 +586,16 @@ p {
     z-index: 5;
   }
   .nav {
-    position: absolute;
+    position: fixed;
     z-index: 4;
     left: 0;
     top: -100vh;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: #ffffff;
-    padding-top: 158px;
     transition: top 0.5s ease-in-out;
     overflow: auto;
+    padding: 125px 0;
   }
   .nav_active {
     top: 0;
